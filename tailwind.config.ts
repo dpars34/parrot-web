@@ -7,6 +7,14 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors: {
+      primary: '#EABD48',
+      secondary: '#FF3838',
+      primaryText: '#202020',
+      secondaryText: '#838383',
+      'white': '#ffffff',
+      'gray-bg': '#F6F6F6',
+    },
     fontFamily: {
       'line': ['LINE Seed JP', 'system-ui'], 
     },

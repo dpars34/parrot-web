@@ -6,7 +6,7 @@ const meta = {
   title: 'Example/NavBar',
   component: NavBar,
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
   },
   tags: ['autodocs'],
   // argTypes: {

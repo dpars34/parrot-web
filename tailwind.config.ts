@@ -14,6 +14,7 @@ const config: Config = {
       secondaryText: '#838383',
       'white': '#ffffff',
       'gray-bg': '#F6F6F6',
+      'bg': '#FAFAFA',
     },
     fontFamily: {
       'line': ['LINE Seed JP', 'system-ui'], 

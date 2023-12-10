@@ -1,0 +1,17 @@
+.splide__pagination {
+  justify-content: right;
+  padding: 40px;
+  bottom: 0;
+}
+
+.splide__pagination__page {
+  background: #FF7373;
+  width: 40px;
+  height: 6px;
+  border-radius: 10px;
+}
+
+.splide__pagination__page.is-active {
+  background: #C01212;
+  transform: scale(1);
+}

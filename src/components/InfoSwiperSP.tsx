@@ -34,23 +34,23 @@ const InfoSwiper: React.FC<IInfoSwiperProps> = (props) => {
         padding: '3.5rem',
         gap: '2rem',
         arrows: false,
+        pagination: false,
       } }>
-      <div className="grid grid-cols-2 w-full h-[623px] bg-white">
-        <div className="bg-secondary p-[70px] flex flex-col gap-6 text-white font-bold rounded-l-2xl relative">
-          <div className="text-3xl">{props.items[activeSlide].subTitle}</div>
-          <div className="text-base">{props.items[activeSlide].description}</div>
-          <ul className="splide__pagination"></ul>
+      <div className="bg-white">
+        <div className="bg-secondary h-[11.375rem] p-6 flex flex-col items-center gap-2 text-white font-bold relative rounded-t-lg mx-4">
+          <div className="text-xl">{props.items[activeSlide].subTitle}</div>
+          <div className="text-base text-center">{props.items[activeSlide].description}</div>
         </div>
-        <div className="pt-10 flex flex-col gap-8 justify-between rounded-r-2xl">
-          <div className="px-10 text-4xl font-bold text-center whitespace-pre-wrap">{`${props.items[activeSlide].title}`}</div>
+        <div className="pt-10 flex flex-col gap-8 justify-between rounded-2xl">
+          <div className="px-10 text-2xl font-bold text-center whitespace-pre-wrap h-[4.5rem]">{`${props.items[activeSlide].title}`}</div>
           <div>
             <SplideTrack>
               { props.items.map(item => {
                 return <SplideSlide>
-                <div className="relative h-[432px]">
-                  <div className="bg-bg h-[392px] w-full absolute top-[42px] rounded-t-3xl"></div>
-                  <div className="w-[192px] mx-auto relative">
-                    <Image src={item.image} alt="Image 1" className="object-cover h-full w-full rounded-[30px]"/>
+                <div className="relative h-[19.75rem]">
+                  <div className="bg-bg h-[16.625rem] w-full absolute top-[3.125rem] rounded-t-3xl"></div>
+                  <div className="w-[8.75rem] mx-auto relative">
+                    <Image src={item.image} alt="Image 1" className="object-cover h-full w-full rounded-[1.875rem]"/>
                   </div>
                 </div>
               </SplideSlide>

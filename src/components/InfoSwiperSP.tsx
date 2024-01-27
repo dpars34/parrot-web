@@ -36,12 +36,12 @@ const InfoSwiper: React.FC<IInfoSwiperProps> = (props) => {
         arrows: false,
         pagination: false,
       } }>
-      <div className="bg-white">
+      <div>
         <div className="bg-secondary h-[11.375rem] p-6 flex flex-col items-center gap-2 text-white font-bold relative rounded-t-lg mx-4">
           <div className="text-xl">{props.items[activeSlide].subTitle}</div>
           <div className="text-base text-center">{props.items[activeSlide].description}</div>
         </div>
-        <div className="pt-10 flex flex-col gap-8 justify-between rounded-2xl">
+        <div className="pt-10 flex flex-col gap-8 justify-between rounded-2xl bg-white">
           <div className="px-10 text-2xl font-bold text-center whitespace-pre-wrap h-[4.5rem]">{`${props.items[activeSlide].title}`}</div>
           <div>
             <SplideTrack>

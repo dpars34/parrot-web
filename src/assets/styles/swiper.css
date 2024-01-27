@@ -1,17 +1,33 @@
-.splide__pagination {
+.info-swiper-pagination {
   justify-content: right;
   padding: 40px;
   bottom: 0;
 }
 
-.splide__pagination__page {
+.info-swiper-pagination > li > .splide__pagination__page {
   background: #FF7373;
   width: 40px;
   height: 6px;
   border-radius: 10px;
 }
 
-.splide__pagination__page.is-active {
+.info-swiper-pagination > li > .splide__pagination__page.is-active {
   background: #C01212;
+  transform: scale(1);
+}
+
+.entry-swiper-pagination {
+  bottom: -1.5rem;
+}
+
+.entry-swiper-pagination > li > .splide__pagination__page {
+  background: #DCDCDC;
+  width: 1.875rem;
+  height: 0.25rem;
+  border-radius: 0.625rem;
+}
+
+.entry-swiper-pagination > li > .splide__pagination__page.is-active {
+  background: #DA1818;
   transform: scale(1);
 }

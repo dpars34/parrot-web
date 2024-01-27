@@ -10,6 +10,7 @@ import React, { useState } from 'react'
 
 interface IInfoSwiperProps {
   items: {
+    id: number,
     title: string,
     subTitle: string,
     description: string,
@@ -39,14 +40,14 @@ const InfoSwiper: React.FC<IInfoSwiperProps> = (props) => {
         <div className="bg-secondary p-[70px] flex flex-col gap-6 text-white font-bold rounded-l-2xl relative">
           <div className="text-3xl">{props.items[activeSlide].subTitle}</div>
           <div className="text-base">{props.items[activeSlide].description}</div>
-          <ul className="splide__pagination"></ul>
+          <ul className="splide__pagination info-swiper-pagination"></ul>
         </div>
         <div className="pt-10 flex flex-col gap-8 justify-between rounded-r-2xl">
           <div className="px-10 text-4xl font-bold text-center whitespace-pre-wrap">{`${props.items[activeSlide].title}`}</div>
           <div>
             <SplideTrack>
               { props.items.map(item => {
-                return <SplideSlide>
+                return <SplideSlide key={item.id}>
                 <div className="relative h-[432px]">
                   <div className="bg-bg h-[392px] w-full absolute top-[42px] rounded-t-3xl"></div>
                   <div className="w-[192px] mx-auto relative">

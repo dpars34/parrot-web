@@ -38,6 +38,26 @@ const Home: React.FC = () => {
 
   const items = use(getData())
 
+  const menuItems = [
+    {
+      title: 'パロットでできること',
+      value: 'info'
+    },
+    {
+      title: '投稿された方言',
+      value: 'accents'
+    },
+    {
+      title: 'ダウンロード',
+      value: 'download'
+    },
+    // {
+    //   title: 'お問い合わせ',
+    //   value: 'contact'
+    // }
+  ]
+  
+
   const swiperItems = [ 
     {
       id: 1,
@@ -141,7 +161,7 @@ const Home: React.FC = () => {
   return (
     <div className="bg-gray-bg h-full p-4 md:p-10">
       <p>{ items?.user_location }</p>
-      <NavBar onItemClick={() => {}}/>
+      <NavBar menuItems={menuItems}/>
       <div className="pt-10 pb-16 flex flex-col items-center md:flex-row md:justify-between md:px-10 md:pb-[7rem] lg:pr-0">
         <div>
           <div className="font-bold text-2xl text-center whitespace-pre-wrap md:text-left md:text-4xl lg:whitespace-normal">{`誰でも投稿できる、\nみんなの方言辞典`}</div>
@@ -155,13 +175,15 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="md:hidden">
-        <InfoSwiperSP items={swiperItems}/>
+      <div id="info" className="scroll-m-4">
+        <div className="md:hidden">
+          <InfoSwiperSP items={swiperItems}/>
+        </div>
+        <div className="hidden md:block">
+          <InfoSwiper items={swiperItems}/>
+        </div>
       </div>
-      <div className="hidden md:block">
-        <InfoSwiper items={swiperItems}/>
-      </div>
-      <div className="py-20 md:py-[10rem]">
+      <div id="accents" className="my-20 md:my-[10rem] scroll-m-4">
         <div className="text-center font-bold text-xl mb-4">投稿された方言</div>
         <div className="md:hidden">
           <EntrySwiper items={entryItems} />
@@ -172,7 +194,9 @@ const Home: React.FC = () => {
           })}
         </div>
       </div>
-      <DownloadCard />
+      <div id="download" className="scroll-m-4">
+        <DownloadCard />
+      </div>
       <div className="pt-6">
         <Footer />
       </div>

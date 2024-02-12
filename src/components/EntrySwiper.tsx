@@ -39,8 +39,8 @@ const EntrySwiper: React.FC<IEntrySwiperProps> = (props) => {
         arrows: false,
       } }>
         <SplideTrack>
-          { props.items.map(item => {
-            return <SplideSlide>
+          { props.items.map((item, index)=> {
+            return <SplideSlide key={index}>
               <EntryCard item={item}/>
           </SplideSlide>
           }) }

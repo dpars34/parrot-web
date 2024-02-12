@@ -46,8 +46,8 @@ const InfoSwiper: React.FC<IInfoSwiperProps> = (props) => {
           <div className="px-10 text-4xl font-bold text-center whitespace-pre-wrap">{`${props.items[activeSlide].title}`}</div>
           <div>
             <SplideTrack>
-              { props.items.map(item => {
-                return <SplideSlide key={item.id}>
+              { props.items.map((item, index) => {
+                return <SplideSlide key={index}>
                 <div className="relative h-[432px]">
                   <div className="bg-bg h-[392px] w-full absolute top-[42px] rounded-t-3xl"></div>
                   <div className="w-[192px] mx-auto relative">

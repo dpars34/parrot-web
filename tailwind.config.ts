@@ -12,6 +12,7 @@ const config: Config = {
       secondary: '#FF3838',
       primaryText: '#202020',
       secondaryText: '#838383',
+      black: '#000000',
       'white': '#ffffff',
       'gray-bg': '#F6F6F6',
       'bg': '#FAFAFA',

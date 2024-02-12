@@ -1,4 +1,4 @@
-import { doc, getDoc } from "firebase/firestore"; 
+import { getDocs, query, orderBy, limit, collection } from "firebase/firestore"; 
 import { db } from './firebase.js'
 import { use } from "react";
 import Image from 'next/image'
@@ -17,26 +17,27 @@ import swiper from '../assets/screenshot1.jpg'
 import swiper2 from '../assets/screenshot2.jpg'
 import swiper3 from '../assets/screenshot3.jpg'
 
+import { IEntry } from '../../types'
+
 const Home: React.FC = () => {
 
   // FETCH USER DATA
   const getData = async () => {
+    const array :IEntry[]= []
     try {
-      const docRef = doc(db, "users", "139K5hKZNgVCHnpUZCoISvwB4CD2");
-      const docSnap = await getDoc(docRef);
-      if (docSnap.exists()) {
-        console.log("Document data:", docSnap.data());
-        const snapshot = docSnap.data()
-        return snapshot
-      } else {
-        console.log("No such document!");
-      }
+      const usersRef = collection(db, "entries")
+      const q = query(usersRef, orderBy("date_created", "desc"), limit(8))
+      const querySnapshot = await getDocs(q)
+      querySnapshot.forEach((doc) => {
+        array.push(doc.data() as IEntry)
+      })
+      return array
     } catch(e) {
       console.log(e)
     }
   }
 
-  const items = use(getData())
+  const entryItems = use(getData())
 
   const menuItems = [
     {
@@ -82,85 +83,8 @@ const Home: React.FC = () => {
     }
   ]
 
-  const entryItems = [
-    {
-      phraseTitle: 'タイトルです',
-      phraseStandard: 'タイトルです',
-      phraseExplain: 'タイトルです',
-      userName: 'テストユーザ',
-      phraseAccent: '大阪弁',
-      likeCount: 2,
-      commentsCount: 1
-    },
-    {
-      phraseTitle: 'タイトルです',
-      phraseStandard: 'タイトルです',
-      phraseExplain: 'タイトルです',
-      userName: 'テストユーザ',
-      phraseAccent: '大阪弁',
-      likeCount: 2,
-      commentsCount: 1
-    },
-    {
-      phraseTitle: 'タイトルです',
-      phraseStandard: 'タイトルです',
-      phraseExplain: 'タイトルです',
-      userName: 'テストユーザ',
-      phraseAccent: '大阪弁',
-      likeCount: 2,
-      commentsCount: 1
-    },
-    {
-      phraseTitle: 'タイトルです',
-      phraseStandard: 'タイトルです',
-      phraseExplain: 'タイトルです',
-      userName: 'テストユーザ',
-      phraseAccent: '大阪弁',
-      likeCount: 2,
-      commentsCount: 1
-    },
-    {
-      phraseTitle: 'タイトルです',
-      phraseStandard: 'タイトルです',
-      phraseExplain: 'タイトルです',
-      userName: 'テストユーザ',
-      phraseAccent: '大阪弁',
-      likeCount: 2,
-      commentsCount: 1
-    },
-    {
-      phraseTitle: 'タイトルです',
-      phraseStandard: 'タイトルです',
-      phraseExplain: 'タイトルです',
-      userName: 'テストユーザ',
-      phraseAccent: '大阪弁',
-      likeCount: 2,
-      commentsCount: 1
-    },
-    {
-      phraseTitle: 'タイトルです',
-      phraseStandard: 'タイトルです',
-      phraseExplain: 'タイトルです',
-      userName: 'テストユーザ',
-      phraseAccent: '大阪弁',
-      likeCount: 2,
-      commentsCount: 1
-    },
-    {
-      phraseTitle: 'タイトルです',
-      phraseStandard: 'タイトルです',
-      phraseExplain: 'タイトルです',
-      userName: 'テストユーザ',
-      phraseAccent: '大阪弁',
-      likeCount: 2,
-      commentsCount: 1
-    }
-  ]
-
-
   return (
     <div className="bg-gray-bg h-full p-4 md:p-10">
-      <p>{ items?.user_location }</p>
       <NavBar menuItems={menuItems}/>
       <div className="pt-10 pb-16 flex flex-col items-center md:flex-row md:justify-between md:px-10 md:pb-[7rem] lg:pr-0">
         <div>
@@ -186,10 +110,10 @@ const Home: React.FC = () => {
       <div id="accents" className="my-20 md:my-[10rem] scroll-m-4">
         <div className="text-center font-bold text-xl mb-4">投稿された方言</div>
         <div className="md:hidden">
-          <EntrySwiper items={entryItems} />
+          <EntrySwiper items={entryItems ?? []} />
         </div>
         <div className="hidden md:grid md:grid-cols-3 md:gap-3 lg:grid-cols-4">
-          {entryItems.map((entry) => {
+          {entryItems?.map((entry) => {
             return (<EntryCard item={entry} />)
           })}
         </div>

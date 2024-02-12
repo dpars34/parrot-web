@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import logo from '../assets/logo1.png'
-import MenuModal from "@/components/MenuModal"
+import MenuModal from "./MenuModal"
 import { useState } from 'react'
 
 interface INavBarProps {

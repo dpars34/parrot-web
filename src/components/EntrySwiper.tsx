@@ -7,17 +7,10 @@ import '@splidejs/react-splide/css'
 import '../assets/styles/swiper.css'
 import React, { useState } from 'react'
 import EntryCard from './EntryCard';
+import { IEntry } from '../../types'
 
 interface IEntrySwiperProps {
-  items: {
-    phraseTitle: string,
-    phraseStandard: string,
-    phraseExplain: string,
-    userName: string,
-    phraseAccent: string,
-    likeCount: number,
-    commentsCount: number,
-  }[]
+  items: IEntry[]
 }
 
 const EntrySwiper: React.FC<IEntrySwiperProps> = (props) => {

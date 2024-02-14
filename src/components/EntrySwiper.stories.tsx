@@ -25,77 +25,77 @@ export const Primary: Story = {
   args: {
     items: [ 
       {
-        phraseTitle: 'タイトルです',
-        phraseStandard: 'タイトルです',
-        phraseExplain: 'タイトルです',
-        userName: 'テストユーザ',
-        phraseAccent: '大阪弁',
-        likeCount: 2,
-        commentsCount: 1
+        phrase_title: 'タイトルです',
+        phrase_standard: 'タイトルです',
+        phrase_explain: 'タイトルです',
+        user_name: 'テストユーザ',
+        phrase_accent: '大阪弁',
+        like_count: 2,
+        comments_count: 1
       },
       {
-        phraseTitle: 'タイトルです',
-        phraseStandard: 'タイトルです',
-        phraseExplain: 'タイトルです',
-        userName: 'テストユーザ',
-        phraseAccent: '大阪弁',
-        likeCount: 2,
-        commentsCount: 1
+        phrase_title: 'タイトルです',
+        phrase_standard: 'タイトルです',
+        phrase_explain: 'タイトルです',
+        user_name: 'テストユーザ',
+        phrase_accent: '大阪弁',
+        like_count: 2,
+        comments_count: 1
       },
       {
-        phraseTitle: 'タイトルです',
-        phraseStandard: 'タイトルです',
-        phraseExplain: 'タイトルです',
-        userName: 'テストユーザ',
-        phraseAccent: '大阪弁',
-        likeCount: 2,
-        commentsCount: 1
+        phrase_title: 'タイトルです',
+        phrase_standard: 'タイトルです',
+        phrase_explain: 'タイトルです',
+        user_name: 'テストユーザ',
+        phrase_accent: '大阪弁',
+        like_count: 2,
+        comments_count: 1
       },
       {
-        phraseTitle: 'タイトルです',
-        phraseStandard: 'タイトルです',
-        phraseExplain: 'タイトルです',
-        userName: 'テストユーザ',
-        phraseAccent: '大阪弁',
-        likeCount: 2,
-        commentsCount: 1
+        phrase_title: 'タイトルです',
+        phrase_standard: 'タイトルです',
+        phrase_explain: 'タイトルです',
+        user_name: 'テストユーザ',
+        phrase_accent: '大阪弁',
+        like_count: 2,
+        comments_count: 1
       },
       {
-        phraseTitle: 'タイトルです',
-        phraseStandard: 'タイトルです',
-        phraseExplain: 'タイトルです',
-        userName: 'テストユーザ',
-        phraseAccent: '大阪弁',
-        likeCount: 2,
-        commentsCount: 1
+        phrase_title: 'タイトルです',
+        phrase_standard: 'タイトルです',
+        phrase_explain: 'タイトルです',
+        user_name: 'テストユーザ',
+        phrase_accent: '大阪弁',
+        like_count: 2,
+        comments_count: 1
       },
       {
-        phraseTitle: 'タイトルです',
-        phraseStandard: 'タイトルです',
-        phraseExplain: 'タイトルです',
-        userName: 'テストユーザ',
-        phraseAccent: '大阪弁',
-        likeCount: 2,
-        commentsCount: 1
+        phrase_title: 'タイトルです',
+        phrase_standard: 'タイトルです',
+        phrase_explain: 'タイトルです',
+        user_name: 'テストユーザ',
+        phrase_accent: '大阪弁',
+        like_count: 2,
+        comments_count: 1
       },
       {
-        phraseTitle: 'タイトルです',
-        phraseStandard: 'タイトルです',
-        phraseExplain: 'タイトルです',
-        userName: 'テストユーザ',
-        phraseAccent: '大阪弁',
-        likeCount: 2,
-        commentsCount: 1
+        phrase_title: 'タイトルです',
+        phrase_standard: 'タイトルです',
+        phrase_explain: 'タイトルです',
+        user_name: 'テストユーザ',
+        phrase_accent: '大阪弁',
+        like_count: 2,
+        comments_count: 1
       },
       {
-        phraseTitle: 'タイトルです',
-        phraseStandard: 'タイトルです',
-        phraseExplain: 'タイトルです',
-        userName: 'テストユーザ',
-        phraseAccent: '大阪弁',
-        likeCount: 2,
-        commentsCount: 1
-      }
+        phrase_title: 'タイトルです',
+        phrase_standard: 'タイトルです',
+        phrase_explain: 'タイトルです',
+        user_name: 'テストユーザ',
+        phrase_accent: '大阪弁',
+        like_count: 2,
+        comments_count: 1
+      },
     ]
   },
 };

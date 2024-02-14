@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "firebase": "^10.6.0",
     "material-icons": "^1.13.12",
     "next": "14.0.1",

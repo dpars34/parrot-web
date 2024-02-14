@@ -10,7 +10,7 @@ import EntryCard from './EntryCard';
 import { IEntry } from '../../types'
 
 interface IEntrySwiperProps {
-  items: IEntry[]
+  items: IEntry[],
 }
 
 const EntrySwiper: React.FC<IEntrySwiperProps> = (props) => {
@@ -34,7 +34,7 @@ const EntrySwiper: React.FC<IEntrySwiperProps> = (props) => {
         <SplideTrack>
           { props.items.map((item, index)=> {
             return <SplideSlide key={index}>
-              <EntryCard item={item}/>
+              <EntryCard item={item} />
           </SplideSlide>
           }) }
         </SplideTrack>

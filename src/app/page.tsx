@@ -110,7 +110,7 @@ const Home: React.FC = () => {
       <div id="accents" className="my-20 md:my-[10rem] scroll-m-4">
         <div className="text-center font-bold text-xl mb-4">投稿された方言</div>
         <div className="md:hidden">
-          <EntrySwiper items={entryItems ?? []} />
+          <EntrySwiper items={entryItems ?? [] }/>
         </div>
         <div className="hidden md:grid md:grid-cols-3 md:gap-3 lg:grid-cols-4">
           {entryItems?.map((entry) => {

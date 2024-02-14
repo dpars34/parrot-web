@@ -28,13 +28,13 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     item: {
-      phraseTitle: 'タイトルです',
-      phraseStandard: 'タイトルです',
-      phraseExplain: 'タイトルです',
-      userName: 'テストユーザ',
-      phraseAccent: '大阪弁',
-      likeCount: 2,
-      commentsCount: 1
+      phrase_title: 'タイトルです',
+      phrase_standard: 'タイトルです',
+      phrase_explain: 'タイトルです',
+      user_name: 'テストユーザ',
+      phrase_accent: '大阪弁',
+      like_count: 2,
+      comments_count: 1
     }
   },
 };
@@ -42,13 +42,13 @@ export const Primary: Story = {
 export const Example: Story = {
   args: {
     item: {
-      phraseTitle: 'そんなんしたら、めんでまう。',
-      phraseStandard: 'そんなことしたら、壊してしまう。',
-      phraseExplain: '壊した時は「めげた」と活用します。',
-      userName: 'テストユーザテストユーザテストユーザ',
-      phraseAccent: '大阪弁大阪弁大阪弁',
-      likeCount: 2,
-      commentsCount: 1
+      phrase_title: 'そんなんしたら、めんでまう。',
+      phrase_standard: 'そんなことしたら、壊してしまう。',
+      phrase_explain: '壊した時は「めげた」と活用します。',
+      user_name: 'テストユーザテストユーザテストユーザ',
+      phrase_accent: '大阪弁大阪弁大阪弁',
+      like_count: 2,
+      comments_count: 1
     }
   },
 };

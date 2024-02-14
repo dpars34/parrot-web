@@ -36,7 +36,7 @@ const InfoSwiper: React.FC<IInfoSwiperProps> = (props) => {
         gap: '2rem',
         arrows: false,
       } }>
-      <div className="grid grid-cols-2 w-full h-[623px] bg-white">
+      <div className="grid grid-cols-2 w-full h-[623px] bg-white rounded-2xl">
         <div className="bg-secondary p-[70px] flex flex-col gap-6 text-white font-bold rounded-l-2xl relative">
           <div className="text-3xl">{props.items[activeSlide].subTitle}</div>
           <div className="text-base">{props.items[activeSlide].description}</div>

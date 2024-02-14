@@ -114,7 +114,7 @@ const Home: React.FC = () => {
         </div>
         <div className="hidden md:grid md:grid-cols-3 md:gap-3 lg:grid-cols-4">
           {entryItems?.map((entry) => {
-            return (<EntryCard item={entry} />)
+            return (<EntryCard item={entry} key={entry.entry_id}/>)
           })}
         </div>
       </div>

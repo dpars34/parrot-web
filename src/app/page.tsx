@@ -2,6 +2,7 @@ import { getDocs, query, orderBy, limit, collection } from "firebase/firestore";
 import { db } from './firebase.js'
 import { use } from "react";
 import Image from 'next/image'
+import type { Metadata } from 'next'
 
 import EntryCard from "@/components/EntryCard"
 import EntrySwiper from "@/components/EntrySwiper"
@@ -18,6 +19,11 @@ import swiper2 from '../assets/screenshot2.jpg'
 import swiper3 from '../assets/screenshot3.jpg'
 
 import { IEntry } from '../../types'
+
+export const metadata: Metadata = {
+  title: 'パロット：みんなの方言辞典',
+  description: '日本の方言をもっと深く知りたいと思ったことはありませんか？ パロットはだれでも投稿できる方言辞典！',
+}
 
 const Home: React.FC = () => {
 

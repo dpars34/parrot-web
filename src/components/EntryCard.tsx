@@ -9,7 +9,7 @@ const EntryCard: React.FC<IEntryCardProps> = ({ item }) => {
     <div className="bg-white p-6 font-line rounded-lg text-primaryText"> 
       <h2 className="font-bold text-2xl	h-[4.2rem] line-clamp-2">{ item.phrase_title }</h2>
       <div className="font-bold h-12 text-secondaryText line-clamp-2">{ item.phrase_standard }</div>
-      <div className="text-sm h-11 text-secondaryText line-clamp-2">{ item.phrase_explain }</div>
+      <div className="text-sm h-10 text-secondaryText line-clamp-2">{ item.phrase_explain }</div>
       <div className="user-info grid grid-cols-2 pb-2 border-b text-secondaryText gap-4">
         <div className="flex items-center gap-1	">
           <span className="material-icons">account_circle</span>

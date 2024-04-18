@@ -13,7 +13,7 @@ interface IInfoSwiperProps {
     id: number,
     title: string,
     subTitle: string,
-    description: string,
+    description: string[],
     image: StaticImageData,
   }[]
 }
@@ -39,7 +39,9 @@ const InfoSwiper: React.FC<IInfoSwiperProps> = (props) => {
       <div className="grid grid-cols-2 w-full h-[623px] bg-white rounded-2xl">
         <div className="bg-secondary p-[70px] flex flex-col gap-6 text-white font-bold rounded-l-2xl relative">
           <div className="text-3xl">{props.items[activeSlide].subTitle}</div>
-          <div className="text-base">{props.items[activeSlide].description}</div>
+          { props.items[activeSlide].description.map((text) => {
+            return <div className="text-base">{text}</div>
+          }) }
           <ul className="splide__pagination info-swiper-pagination"></ul>
         </div>
         <div className="pt-10 flex flex-col gap-8 justify-between rounded-r-2xl">
